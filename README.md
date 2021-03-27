@@ -33,7 +33,7 @@ it used the last release v0.3.0.alpha.18
 
 ```
 deno install --unstable -A -f -n aleph https://deno.land/x/aleph@v0.3.0-alpha.18/cli.ts
-cd demo-deno/hello
+cd demo-deno/hello-aleph
 aleph dev
 ```
 
