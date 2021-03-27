@@ -16,6 +16,12 @@ Install deno :
 
 * https://deno.land/manual/getting_started/installation
 
+#### DENO
+
+hello-deno is a hello world with deno only :
+
+todo
+
 
 #### ALEPH
 
@@ -37,7 +43,7 @@ http://localhost:8080
 it is broken for now on win10 powershell but work fine on linux
 
 
-#### ABC
+#### ABC
 
 hello-abc is a hello world with abc framework :
 
@@ -52,10 +58,18 @@ todo
 
 
 
-#### Ressources :
+#### Ressources :
 
 * templating engine : https://deno.land/x/view_engine@v1.4.5
 * awesome deno :
     * https://github.com/denolib/awesome-deno
     * https://github.com/denoone/awesome-deno
+* sucrase : https://sucrase.io/
 
+#### Content :
+
+I add the markdown content in the md folder, but maybe using a separate repo for it
+could be a good idea, I don't know yet.
+
+Git submodules :
+* https://stackoverflow.com/questions/36554810/how-to-link-folder-from-a-git-repo-to-another-repo
