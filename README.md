@@ -1,4 +1,4 @@
-# denodoc
+# denodoc
 
 A fullstack typescript (Deno+framework?+babel/sucrase?) project, a manual+tutorials static markdown engine.
 
@@ -10,9 +10,14 @@ We still need to figure the correct stack, but the fullstack typscript around de
 
 ### Test demos-deno
 
+Differents tests to decide which framework
+
 Install deno : 
 
 * https://deno.land/manual/getting_started/installation
+
+
+#### ALEPH
 
 hello-aleph is a hello world with aleph framework :
 
@@ -32,8 +37,25 @@ http://localhost:8080
 it is broken for now on win10 powershell but work fine on linux
 
 
-hello-abs is a hello world with abc framework :
+#### ABC
+
+hello-abc is a hello world with abc framework :
+
+todo
 
 
+#### OAK
 
 hello-oak is a hello world with oak framework :
+
+todo
+
+
+
+#### Ressources :
+
+* templating engine : https://deno.land/x/view_engine@v1.4.5
+* awesome deno :
+    * https://github.com/denolib/awesome-deno
+    * https://github.com/denoone/awesome-deno
+
