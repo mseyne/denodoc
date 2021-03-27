@@ -20,8 +20,13 @@ Install deno :
 
 hello-deno is a hello world with deno only :
 
-todo
+```
+cd demos/hello-deno
+deno run --allow-net .\start.ts
+```
 
+the site is here
+http://localhost:8000/
 
 #### ALEPH
 
