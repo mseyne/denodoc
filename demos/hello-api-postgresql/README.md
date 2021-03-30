@@ -4,3 +4,9 @@
 ```
 deno run --allow-net server.ts
 ```
+
+set the config file :
+
+config.ts
+
+
