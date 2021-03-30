@@ -2,7 +2,7 @@
 
 A fullstack typescript (Deno+framework?+babel/sucrase?) project, a manual+tutorials static markdown engine.
 
-We still need to figure the correct stack, but the fullstack typscript around deno is the proposed challenge.
+We still need to figure the correct stack, but the fullstack typescript around deno is the proposed challenge.
 
 ### Features :
 * multilingual
@@ -52,15 +52,16 @@ it is broken for now on win10 powershell but work fine on linux
 
 hello-abc is a hello world with abc framework :
 
-todo
-
+```
+cd demos/hello-abc
+deno run --allow-net ./server.ts
+```
 
 #### OAK
 
 hello-oak is a hello world with oak framework :
 
 todo
-
 
 
 #### Ressources :
@@ -70,11 +71,11 @@ todo
     * https://github.com/denolib/awesome-deno
     * https://github.com/denoone/awesome-deno
 * sucrase : https://sucrase.io/
+* markdown : https://github.com/ubersl0th/markdown
 
 #### Content :
 
-I add the markdown content in the md folder, but maybe using a separate repo for it
-could be a good idea, I don't know yet.
+The doc content on another repository for a temporary static website, maybe using it directly as a submodule ?
 
 Git submodules :
 * https://stackoverflow.com/questions/36554810/how-to-link-folder-from-a-git-repo-to-another-repo
