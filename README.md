@@ -1,4 +1,6 @@
-# denodoc
+# Denodoc
+
+Temporary name.
 
 A fullstack typescript (Deno+framework?+babel/sucrase?) project, a manual+tutorials static markdown engine.
 
@@ -7,6 +9,12 @@ We still need to figure the correct stack, but the fullstack typescript around d
 ### Features :
 * multilingual
 * version based (each manual is freezed with a release)
+
+### Inspirations :
+
+* https://linuxjourney.com/
+* https://docs.godotengine.org/en/stable/index.html
+* https://projects.raspberrypi.org/en/projects/
 
 ### Test demos-deno
 
