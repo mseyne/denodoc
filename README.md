@@ -2,7 +2,7 @@
 
 Temporary name.
 
-A fullstack typescript (Deno+framework?+babel/sucrase?) project, a manual+tutorials static markdown engine.
+A fullstack typescript (Deno+Oak+templating?+babel/sucrase?) project, a manual+tutorials static markdown engine.
 
 We still need to figure the correct stack, but the fullstack typescript around deno is the proposed challenge.
 
