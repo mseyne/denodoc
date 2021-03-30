@@ -38,7 +38,7 @@ http://localhost:8000/
 
 #### ALEPH
 
-hello-aleph is a hello world with aleph framework :
+hello-aleph is a hello world with the *aleph* framework :
 
 * https://alephjs.org/docs/get-started
 
@@ -58,7 +58,7 @@ it is broken for now on win10 powershell but work fine on linux
 
 #### ABC
 
-hello-abc is a hello world with abc framework :
+hello-abc is a hello world with the *abc* framework :
 
 ```
 cd demos/hello-abc
@@ -67,9 +67,15 @@ deno run --allow-net ./server.ts
 
 #### OAK
 
-hello-oak is a hello world with oak framework :
+hello-oak is a hello world with the *oak* framework :
 
-todo
+```
+cd demos/hello-oak
+deno run --allow-net ./server.ts
+```
+
+the site is here
+http://localhost:8080/
 
 
 #### Ressources :
@@ -80,6 +86,9 @@ todo
     * https://github.com/denoone/awesome-deno
 * sucrase : https://sucrase.io/
 * markdown : https://github.com/ubersl0th/markdown
+
+* postgres : https://deno.land/x/postgres@v0.8.0
+* denon : https://deno.land/x/denon@2.4.7
 
 #### Content :
 
