@@ -33,10 +33,8 @@ const getProducts = ({ response }: { response: any }) => {
 
 // @desc    Get single products
 // @route   GET /api/v1/products/:id
-const getProduct = ({ params, response }: { params: { id: string}, response: any } ) => 
-{
+const getProduct = ({ params, response }: { params: { id: string }, response: any } ) => {
     const product: Product | undefined = products.find(p => p.id === params.id)
-
     if(product) {
         response.status = 200
         response.body = {
@@ -54,9 +52,8 @@ const getProduct = ({ params, response }: { params: { id: string}, response: any
 
 // @desc    Add product
 // @route   Post /api/v1/products
-const addProduct = async ({ request, response }: { request: any, response: any }) => 
-{
-    const body = await request.body()
+const addProduct = async ({ request, response }: { request: any, response: any }) => {
+    const body_val = await request.body().value
     if (!request.hasBody) {
         response.status = 400
         response.body = {
@@ -64,7 +61,8 @@ const addProduct = async ({ request, response }: { request: any, response: any }
             msg: 'No data'
         }
     } else {
-        const product: Product = body.value
+        const product: Product = body_val
+        console.log(product)
         product.id = v4.generate()
         products.push(product)
         response.status = 201
@@ -77,13 +75,12 @@ const addProduct = async ({ request, response }: { request: any, response: any }
 
 // @desc    Update product
 // @route   PUT /api/v1/products/:id
-const updateProduct = async ({ params, request, response }: { params: {id:string}, request: any, response: any }) =>
-{
+const updateProduct = async ({ params, request, response }: { params: {id:string}, request: any, response: any }) => {
     const product: Product | undefined = products.find(p => p.id === params.id)
 
     if(product) {
-        const body = await request.body()
-        const updateData: { name?: string; description?: string; price?: number } = body.value
+        const body_val = await request.body().value
+        const updateData: { name?: string; description?: string; price?: number } = body_val
         products = products.map(p => p.id === params.id ? { ...p, ...updateData} : p)
         response.status = 200
         response.body = {
@@ -101,9 +98,8 @@ const updateProduct = async ({ params, request, response }: { params: {id:string
 
 // @desc    Delete product
 // @route   DELETE /api/v1/products/:id
-const deleteProduct = ({ params, response }: { params: {id :string}, response:any }) =>
-{
-    products = product.filter(p => p.id !== params.id)
+const deleteProduct = ({ params, response }: { params: {id :string}, response:any }) => {
+    products = products.filter(p => p.id !== params.id)
     response.body = {
         success: true,
         msg: 'Product removed'
