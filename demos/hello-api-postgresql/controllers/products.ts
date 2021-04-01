@@ -1,5 +1,5 @@
 import { Client } from "https://deno.land/x/postgres/mod.ts"
-import { Product } from '../types.ts'
+//import { Product } from '../types.ts'
 import { dbCreds } from '../config.ts'
 
 // Init client
@@ -65,6 +65,7 @@ const getProduct = async ({ params, response }: { params: { id: string }, respon
 // @route   Post /api/v1/products
 const addProduct = async ({ request, response }: { request: any, response: any }) => {
     const product = await request.body().value
+    console.log(product)
 
     if (!request.hasBody) {
         response.status = 400
@@ -91,6 +92,7 @@ const addProduct = async ({ request, response }: { request: any, response: any }
                 msg: err.toString()
             }
         } finally {
+            console.log(`product "${product.description}" added.`)
             await client.end()
         }
     }

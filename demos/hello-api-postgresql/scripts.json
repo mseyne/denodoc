@@ -8,6 +8,7 @@
         "env",
         "net"
       ],
+      "unstable":true,
       "env": {
         "PORT": "8000"
       }
