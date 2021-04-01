@@ -1,19 +1,14 @@
-import { 
-    Application, 
-    Router,
-    RouterContext
-} from "./deps.ts"
+import { Application } from "./deps.ts"
+import router from "./routes.ts"
 
+const port = Deno.env.get("PORT") || 8000 
 const app = new Application
-const router = new Router
 
-router.get('/', (ctx: RouterContext) => {
-    ctx.response.body = 'Hello World '
-});
+app.use(router.routes())
+app.use(router.allowedMethods())
 
-app.use(router.routes());
-app.use(router.allowedMethods());
 app.addEventListener('listen', ({hostname, port, secure}) => {
-    console.log(`Listening on ${secure ? 'https' : 'http'}://${hostname || 'localhost'}:${port}.`);
+    console.log(`Listening on ${secure ? 'https' : 'http'}://${hostname || 'localhost'}:${port}.`)
 })
-await app.listen({ port: 5000 });
+
+await app.listen({ port: +port })

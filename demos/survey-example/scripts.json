@@ -1,0 +1,17 @@
+{
+  "$schema": "https://deno.land/x/denon@2.4.7/schema.json",
+  "scripts": {
+    "start": {
+      "cmd": "deno run server.ts",
+      "desc": "run server.ts file",
+      "allow": ["env", "net"],
+      "unstable": true,
+      "env": {
+        "PORT": "5050"
+      }
+    }
+  },
+  "logger": {
+    "debug":true
+  }
+}
