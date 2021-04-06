@@ -5,4 +5,4 @@ DB_NAME=surveyapp
 DB_PASSWORD=admin
 DB_HOST=localhost
 DB_PORT=5432
-JWT_SECRET_KEY=azq80osdjpoAJEQ11lSJDQSDzakjs99dqo
+JWT_SECRET_KEY=secret_key

@@ -1,5 +1,6 @@
-import { RouterContext, db, hash, compare, create, verify, decode, getNumericDate } from "../deps.ts"
-import { User } from "../models/Users.ts"
+import { RouterContext, hash, compare, create, verify, decode, getNumericDate } from "../deps.ts"
+import db from "../db.ts"
+import User from "../models/Users.ts"
 
 class AuthController {
     // Login : Get email and password from json, check if 
@@ -42,7 +43,7 @@ class AuthController {
                         user: user.email,
                         exp: getNumericDate(60*5)
                     }
-                    const key = "XXxxxxX" // pass it to ENV
+                    const key = Deno.env.get("JWT_SECRET_KEY")!
                     const token = await create(
                         { alg:"HS512", typ:"JWT" },
                         payload,
@@ -104,11 +105,11 @@ class AuthController {
             } else {
                 await user.save(db)
                 user.id = await user.get_id(db)
-                console.log(`User "${user.name}" created with the id ${user.id}.`)
                 ctx.response.status = 201
                 ctx.response.body = {
                     success: true,
-                    data: user
+                    data: user,
+                    msg: `User "${user.name}" created with the id ${user.id}.`
                 }
             }
         } catch (err) {

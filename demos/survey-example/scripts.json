@@ -4,11 +4,8 @@
     "start": {
       "cmd": "deno run server.ts",
       "desc": "run server.ts file",
-      "allow": ["env", "net"],
-      "unstable": true,
-      "env": {
-        "PORT": "5050"
-      }
+      "allow": ["env", "net", "read"],
+      "unstable": true
     }
   },
   "logger": {

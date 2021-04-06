@@ -1,11 +1,16 @@
-export class User {
-    public id:string
+import db from "../db.ts"
+
+export default class User {
+    public id:string = ''
     public name:string
     public email:string
     public password:string
 
-    constructor ({id='',name='',email='',password=''}) {
-        this.id = id
+    constructor ({
+        name='',
+        email='',
+        password=''
+    }) {
         this.name = name
         this.email = email 
         this.password = password

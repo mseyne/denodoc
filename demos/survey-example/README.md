@@ -8,8 +8,8 @@ https://github.com/thecodeholic/deno-survey
 
 Use a postgresql database :
 
-A **config.ts** file is necessary to set the database access,
-see *config_example.ts*
+A **dotenv** file is necessary to set the database access,
+see *env_example* to rename in *.env*
 
 
 ## DEV
@@ -23,7 +23,7 @@ denon start
 else, to start the application :
 
 ```
-deno run --allow-env --allow-net server.ts
+deno run --allow-env --allow-net --allow-read unstable server.ts
 ```
 
 ## API
@@ -45,3 +45,4 @@ DELETE
 ### POSTS:
 ### COMMENTS:
 ### FEATURES:
+### COURSES:
