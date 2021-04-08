@@ -1,24 +1,8 @@
 # Denodoc
 
-Temporary name.
-
-A fullstack typescript (Deno+Oak+templating?+babel/sucrase?) project, a manual+tutorials static markdown engine.
-
-We still need to figure the correct stack, but the fullstack typescript around deno is the proposed challenge.
-
-### Features :
-* multilingual
-* version based (each manual is freezed with a release)
-
-### Inspirations :
-
-* https://linuxjourney.com/
-* https://docs.godotengine.org/en/stable/index.html
-* https://projects.raspberrypi.org/en/projects/
+Learning deno repository
 
 ### Test demos-deno
-
-Differents tests to decide which framework
 
 Install deno : 
 
@@ -77,22 +61,12 @@ deno run --allow-net ./server.ts
 the site is here
 http://localhost:8080/
 
-
 #### Ressources :
 
-* templating engine : https://deno.land/x/view_engine@v1.4.5
 * awesome deno :
     * https://github.com/denolib/awesome-deno
     * https://github.com/denoone/awesome-deno
-* sucrase : https://sucrase.io/
 * markdown : https://github.com/ubersl0th/markdown
-
 * postgres : https://deno.land/x/postgres@v0.8.0
 * denon : https://deno.land/x/denon@2.4.7
 
-#### Content :
-
-The doc content on another repository for a temporary static website, maybe using it directly as a submodule ?
-
-Git submodules :
-* https://stackoverflow.com/questions/36554810/how-to-link-folder-from-a-git-repo-to-another-repo
